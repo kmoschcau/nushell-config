@@ -1,8 +1,5 @@
-$env.config = {
-  buffer_editor: "nvim"
-
-  edit_mode: "vi"
-}
+$env.config.buffer_editor = "nvim"
+$env.config.edit_mode = "vi"
 
 def --env y [...args] {
   let tmp = (mktemp -t "yazi-cwd.XXXXXX")
