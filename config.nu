@@ -1,5 +1,6 @@
 $env.config.buffer_editor = "nvim"
 $env.config.edit_mode = "vi"
+$env.config.completions.algorithm = "fuzzy"
 
 def --env y [...args] {
   let tmp = (mktemp -t "yazi-cwd.XXXXXX")
