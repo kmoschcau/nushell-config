@@ -3,15 +3,15 @@ $env.config.edit_mode = "vi"
 $env.config.completions.algorithm = "fuzzy"
 
 def --env y [...args] {
-  let tmp = (mktemp -t "yazi-cwd.XXXXXX")
+  let tmp = (mktemp --tmpdir "yazi-cwd.XXXXXX")
   yazi ...$args --cwd-file $tmp
   let cwd = (open $tmp)
   if $cwd != "" and $cwd != $env.PWD {
     cd $cwd
   }
-  rm -fp $tmp
+  rm --force --permanent $tmp
 }
 
-zoxide init nushell | save -f ~/.zoxide.nu
+zoxide init nushell | save --force ~/.zoxide.nu
 
 source ~/.zoxide.nu
