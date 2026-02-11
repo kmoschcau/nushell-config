@@ -1,3 +1,4 @@
 /vendor/autoload/
 /vendor/completions/
+/history.sqlite3*
 /history.txt
