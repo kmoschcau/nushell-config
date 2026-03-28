@@ -68,8 +68,9 @@ module "update configs" {
     | if $is_on_windows { where $it.win_dir != "none" } else {}
     | par-each {|config|
 
-      let config_name: string = $config.name
+      $config.name
       | if not $config.irregular { $in + "-config" } else {}
+      | let config_name: string
 
       let dir_name = if $is_on_windows {
         $config.win_dir | path expand
