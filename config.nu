@@ -3,6 +3,7 @@ $env.config.completions.algorithm = "fuzzy"
 $env.config.cursor_shape.vi_insert = "blink_line"
 $env.config.cursor_shape.vi_normal = "blink_block"
 $env.config.edit_mode = "vi"
+$env.config.error_style = "nested"
 $env.config.history.file_format = "sqlite"
 $env.config.history.isolation = true
 $env.config.show_banner = false
