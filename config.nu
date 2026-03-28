@@ -6,4 +6,5 @@ $env.config.edit_mode = "vi"
 $env.config.error_style = "nested"
 $env.config.history.file_format = "sqlite"
 $env.config.history.isolation = true
+$env.config.hooks.display_output = "if (term size).columns >= 100 { table --expand --icons } else { table --icons }"
 $env.config.show_banner = false
