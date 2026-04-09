@@ -25,5 +25,5 @@ def ll [
     ...$pattern
   )
   | sort-by --natural name
-  | sort-by --custom {|a,b| $a.type == "dir" and $b.type != "dir" }
+  | sort-by  { $in.type != "dir" }
 }
