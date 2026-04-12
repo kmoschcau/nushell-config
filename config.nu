@@ -1,3 +1,4 @@
+$env.config.auto_cd_implicit = true
 $env.config.buffer_editor = "nvim"
 $env.config.completions.algorithm = "fuzzy"
 $env.config.cursor_shape.vi_insert = "blink_line"
