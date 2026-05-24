@@ -11,8 +11,14 @@ if $is_on_windows {
     'AppsUseLightTheme'
   ).value == 1
 } else {
-  # TODO: Make this more sensitive on Linux.
-  $use_light_mode = (darkman get) == "light"
+  $use_light_mode = (
+    qdbus6
+    org.freedesktop.portal.Desktop
+    /org/freedesktop/portal/desktop
+    org.freedesktop.portal.Settings.Read
+    org.freedesktop.appearance
+    color-scheme
+  ) == "2"
 }
 
 if $use_light_mode {
