@@ -9,3 +9,6 @@ $env.config.history.file_format = "sqlite"
 $env.config.history.isolation = true
 $env.config.hooks.display_output = "if (term size).columns >= 100 { table --expand --icons } else { table --icons }"
 $env.config.show_banner = false
+
+# Do not send dotnet CLI telemetry data
+$env.DOTNET_CLI_TELEMETRY_OPTOUT = "true"
